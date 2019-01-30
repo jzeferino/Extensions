@@ -35,7 +35,7 @@ namespace Microsoft.Extensions.Configuration
 
         private void SectionToJson(StringBuilder jsonBuilder, TestSection section)
         {
-            string ValueToJson(object value) => value == null ? "null" : $"'{value}'";
+            string ValueToJson(object value) => value == null ? "null" : $"\"{value}\"";
 
             jsonBuilder.AppendLine("{");
 

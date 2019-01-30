@@ -44,7 +44,7 @@ namespace Microsoft.Extensions.Configuration
         {
             var json = @"
 {
-    'name': ''
+    ""name"": """"
 }";
             var jsonConfigSrc = LoadProvider(json);
             Assert.Equal(string.Empty, jsonConfigSrc.Get("name"));
@@ -61,7 +61,7 @@ namespace Microsoft.Extensions.Configuration
 
                 var json = @"
 {
-    'number': 3.14
+    ""number"": 3.14
 }";
                 var jsonConfigSrc = LoadProvider(json);
                 Assert.Equal("3.14", jsonConfigSrc.Get("number"));
