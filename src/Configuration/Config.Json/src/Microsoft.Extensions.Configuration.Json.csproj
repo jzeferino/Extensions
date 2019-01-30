@@ -6,7 +6,6 @@
     <PackageTags>$(PackageTags);json</PackageTags>
     <IsShipping>true</IsShipping>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <IsPackable>true</IsPackable>
     <NoWarn>$(NoWarn);3021</NoWarn>
     <LangVersion>latest</LangVersion> 
   </PropertyGroup>
