@@ -70,7 +70,7 @@ namespace Microsoft.Extensions.Configuration.Json
                     {
                         throw new FormatException(Resources.FormatError_KeyIsDuplicated(key));
                     }
-                    _data[key] = value.ToString();
+                    _data[key] = value.ToString(CultureInfo.InvariantCulture);
                     break;
 
                 default:
