@@ -65,7 +65,7 @@ namespace Microsoft.Extensions.Configuration.Json.Test
                     [ 
                         ""9.10.11.12"",
                         ""13.14.15.16""
-                    ],
+                    ]
                 ]
             }";
 
@@ -208,7 +208,7 @@ namespace Microsoft.Extensions.Configuration.Json.Test
                     ""42"": ""c"",
                     ""4"":""d"",
                     ""10"": ""e"",
-                    ""1text"": ""f"",
+                    ""1text"": ""f""
                 }
             }";
 

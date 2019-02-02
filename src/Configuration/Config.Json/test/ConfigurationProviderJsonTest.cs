@@ -42,13 +42,13 @@ namespace Microsoft.Extensions.Configuration
             foreach (var tuple in section.Values)
             {
                 jsonBuilder.AppendLine(tuple.Value.AsArray != null
-                    ? $"'{tuple.Key}': [{string.Join(", ", tuple.Value.AsArray.Select(ValueToJson))}],"
-                    : $"'{tuple.Key}': {ValueToJson(tuple.Value.AsString)},");
+                    ? $"\"{tuple.Key}\": [{string.Join(", ", tuple.Value.AsArray.Select(ValueToJson))}],"
+                    : $"\"{tuple.Key}\": {ValueToJson(tuple.Value.AsString)},");
             }
 
             foreach (var tuple in section.Sections)
             {
-                jsonBuilder.Append($"'{tuple.Key}': ");
+                jsonBuilder.Append($"\"{tuple.Key}\": ");
                 SectionToJson(jsonBuilder, tuple.Section);
             }
 
