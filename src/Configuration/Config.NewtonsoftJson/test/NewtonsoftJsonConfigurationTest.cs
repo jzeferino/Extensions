@@ -24,11 +24,11 @@ namespace Microsoft.Extensions.Configuration.NewtonsoftJson.Test
         {
             var json = @"
 {
-    ""firstname"": ""test"",
-    ""test.last.name"": ""last.name"",
-        ""residential.address"": {
-            ""street.name"": ""Something street"",
-            ""zipcode"": ""12345""
+    'firstname': 'test',
+    'test.last.name': 'last.name',
+        'residential.address': {
+            'street.name': 'Something street',
+            'zipcode': '12345'
         }
 }";
             var jsonConfigSrc = LoadProvider(json);
@@ -44,7 +44,7 @@ namespace Microsoft.Extensions.Configuration.NewtonsoftJson.Test
         {
             var json = @"
 {
-    ""name"": """"
+    'name': ''
 }";
             var jsonConfigSrc = LoadProvider(json);
             Assert.Equal(string.Empty, jsonConfigSrc.Get("name"));
@@ -61,7 +61,7 @@ namespace Microsoft.Extensions.Configuration.NewtonsoftJson.Test
 
                 var json = @"
 {
-    ""number"": 3.14
+    'number': 3.14
 }";
                 var jsonConfigSrc = LoadProvider(json);
                 Assert.Equal("3.14", jsonConfigSrc.Get("number"));
@@ -75,7 +75,7 @@ namespace Microsoft.Extensions.Configuration.NewtonsoftJson.Test
         [Fact]
         public void NonObjectRootIsInvalid()
         {
-            var json = @"""test""";
+            var json = @"'test'";
 
             var exception = Assert.Throws<FormatException>(
                 () => LoadProvider(json));
@@ -104,10 +104,10 @@ namespace Microsoft.Extensions.Configuration.NewtonsoftJson.Test
         public void ThrowExceptionWhenUnexpectedEndFoundBeforeFinishParsing()
         {
             var json = @"{
-                ""name"": ""test"",
-                ""address"": {
-                    ""street"": ""Something street"",
-                    ""zipcode"": ""12345""
+                'name': 'test',
+                'address': {
+                    'street': 'Something street',
+                    'zipcode': '12345'
                 }
             /* Missing a right brace here*/";
             var exception = Assert.Throws<FormatException>(() => LoadProvider(json));
@@ -119,7 +119,7 @@ namespace Microsoft.Extensions.Configuration.NewtonsoftJson.Test
         {
             var json = @"
             {
-              ""Data"": {
+              'Data': {
             ";
 
             var exception = Assert.Throws<FormatException>(() => LoadProvider(json));
