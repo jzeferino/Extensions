@@ -10,6 +10,10 @@
 -->
 <Dependencies>
   <ProductDependencies>
+    <Dependency Name="Microsoft.Bcl.Json.Sources" Version="4.6.0-preview.19105.1">
+      <Uri>https://github.com/dotnet/corefx</Uri>
+      <Sha>9e074e4a3f3626fa953f36ab79e3cd3e6db1c9de</Sha>
+    </Dependency>
     <Dependency Name="Microsoft.Win32.Registry" Version="4.6.0-preview.19105.1">
       <Uri>https://github.com/dotnet/corefx</Uri>
       <Sha>53b8e52dbf12355ce845230f6bbe6c5425bb73e6</Sha>
