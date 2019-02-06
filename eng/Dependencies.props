@@ -18,6 +18,7 @@ and are generated based on the last package release.
   </ItemDefinitionGroup>
 
   <ItemGroup Label=".NET Core dependencies">
+    <LatestPackageReference Include="Microsoft.Bcl.Json.Sources" Version="$(MicrosoftBclJsonSourcesPacakgeVersion)" />
     <LatestPackageReference Include="Microsoft.Win32.Registry" Version="$(MicrosoftWin32RegistryPackageVersion)" />
     <LatestPackageReference Include="System.ComponentModel.Annotations" Version="$(SystemComponentModelAnnotationsPackageVersion)" />
     <LatestPackageReference Include="System.Data.SqlClient" Version="$(SystemDataSqlClientPackageVersion)" />
@@ -54,7 +55,6 @@ and are generated based on the last package release.
     <LatestPackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.6" />
     <LatestPackageReference Include="Microsoft.Azure.KeyVault" Version="2.3.2" />
     <LatestPackageReference Include="Microsoft.Azure.Services.AppAuthentication" Version="1.0.3" />
-    <LatestPackageReference Include="Microsoft.Bcl.Json.Sources" Version="$(MicrosoftBclJsonSourcesPacakgeVersion)" />
     <LatestPackageReference Include="Microsoft.CodeAnalysis.Common" Version="2.8.0" />
     <LatestPackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="2.8.0" />
     <LatestPackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="2.8.0" />
