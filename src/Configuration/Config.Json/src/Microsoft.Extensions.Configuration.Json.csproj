@@ -2,11 +2,13 @@
 
   <PropertyGroup>
     <Description>JSON configuration provider implementation for Microsoft.Extensions.Configuration.</Description>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>netstandard2.0;netcoreapp3.0</TargetFrameworks>
     <PackageTags>$(PackageTags);json</PackageTags>
     <IsShipping>true</IsShipping>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <IsPackable>true</IsPackable>
     <NoWarn>$(NoWarn);3021</NoWarn>
+    <LangVersion>latest</LangVersion> 
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,9 +18,12 @@
   <ItemGroup>
     <Reference Include="Microsoft.Extensions.Configuration" />
     <Reference Include="Microsoft.Extensions.Configuration.FileExtensions" />
-    <Reference Include="Microsoft.Bcl.Json.Sources">
+
+    <Reference Include="Microsoft.Bcl.Json.Sources" Condition="'$(TargetFramework)' == 'netstandard2.0'">
       <PrivateAssets>All</PrivateAssets>
     </Reference>
-    <Reference Include="System.Runtime.CompilerServices.Unsafe" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe" Condition="'$(TargetFramework)' == 'netstandard2.0'" />
+    <Reference Include="Newtonsoft.Json" />
   </ItemGroup>
+
 </Project>
