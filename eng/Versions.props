@@ -21,7 +21,7 @@
     <!-- Packages from dotnet/core-setup -->
     <MicrosoftNETCoreAppPackageVersion>3.0.0-preview-27404-9</MicrosoftNETCoreAppPackageVersion>
     <!-- Packages from dotnet/corefx -->
-    <MicrosoftBclJsonSourcesPacakgeVersion>4.6.0-preview.19105.1</MicrosoftBclJsonSourcesPacakgeVersion>
+    <MicrosoftBclJsonSourcesPackageVersion>4.6.0-preview.19105.1</MicrosoftBclJsonSourcesPackageVersion>
     <MicrosoftWin32RegistryPackageVersion>4.6.0-preview.19105.1</MicrosoftWin32RegistryPackageVersion>
     <SystemComponentModelAnnotationsPackageVersion>4.6.0-preview.19105.1</SystemComponentModelAnnotationsPackageVersion>
     <SystemDataSqlClientPackageVersion>4.7.0-preview.19105.1</SystemDataSqlClientPackageVersion>
