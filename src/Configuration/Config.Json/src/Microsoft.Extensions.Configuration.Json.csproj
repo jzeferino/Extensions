@@ -23,7 +23,6 @@
       <PrivateAssets>All</PrivateAssets>
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe" Condition="'$(TargetFramework)' == 'netstandard2.0'" />
-    <Reference Include="Newtonsoft.Json" />
   </ItemGroup>
 
 </Project>
