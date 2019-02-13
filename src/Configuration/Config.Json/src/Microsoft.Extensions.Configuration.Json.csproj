@@ -7,8 +7,7 @@
     <IsShipping>true</IsShipping>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <IsPackable>true</IsPackable>
-    <NoWarn>$(NoWarn);3021</NoWarn>
-    <LangVersion>latest</LangVersion> 
+    <NoWarn>$(NoWarn);3021;PKG0001</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
@@ -23,7 +22,6 @@
       <PrivateAssets>All</PrivateAssets>
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe" Condition="'$(TargetFramework)' == 'netstandard2.0'" />
-    <Reference Include="Newtonsoft.Json" />
   </ItemGroup>
 
 </Project>
